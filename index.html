@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .input_cont{
+            position: fixed;
+            z-index: 10;
+            border: 1px black solid;
+            background-color:rgba(0,0,0,.3);
+        }
+        *{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: #4a4a4a;
+        }
+        .eror{
+            position: fixed;
+            top: -500px;
+            border: 1px black solid;
+            transition: 200ms;
+            z-index: 10;
+            right: 49%;
+            background-color:rgba(0,0,0,.3);
+            color: white;
+        }
+        .eror.active{
+            top: 100px;
+        }
+        .load{
+            width: 500px;
+            height:500px;
+        }
+        .user {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.308);
+            margin-top: 10px;
+            border-bottom: black 1px solid;
+            box-shadow: 4px 4px 7px 5px;
+            position: relative;
+        }
+        .remove_3{
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: 0;
+        }
+        .user:hover .remove_3{
+            opacity: 1;
+        }
+        .up {
+            background-color: rgba(0, 0, 0, 0.308);
+            color: white;
+            width: 40px;
+            height: 40px;
+            z-index: 20;
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            border-radius: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="input_cont">
+        <input type="text" name="" id="" class="i">
+        <button class="b">search</button>
+    </div>
+    <div class="d">
+        
+    </div>
+    <div class="eror">
+        <button class="remove">
+           X
+        </button>
+       <p>
+            User not found
+       </p>
+       <p>
+           error 404
+        </p>  
+
+    </div>
+    <div class="eror allready">
+        <button class="remove_2">
+            X
+         </button>
+        <p>
+            user added allready
+       </p>
+    </div>
+    <div class="eror enter">
+        <button class="remove_4">
+            X
+         </button>
+        <p>
+            Please enter user login
+       </p>
+    </div>
+    <div class="up">
+        <p>
+            UP
+        </p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
